@@ -1,0 +1,16 @@
+.c-pageheader {
+	padding-top: 3rem;
+	
+	&__avatar {
+		border-radius: 50%;
+		display: block;
+		overflow: hidden;
+		margin: 1rem auto;
+		width: var(--root-avatarsize);
+		height: var(--root-avatarsize);
+	}
+	
+	&__username {
+		text-align: center;
+	}
+}

@@ -1,0 +1,9 @@
+include svgicons
+
+mixin socialmedia(icon, title, link)
+    a.c-socialmedia__link(href=link, target='_blank', title=username + ' on ' + title)
+        +#{icon}
+
+.c-socialmedia
+    each page in socialmedia
+        +socialmedia(page[0], page[1], page[2])

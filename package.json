@@ -1,0 +1,47 @@
+{
+  "name": "me.scheibo.de",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf public/assets/{css/*,javascripts/*}",
+    "html": "pug source/html/pages/ --out public -P",
+    "scss": "node-sass source/sass -o public/assets/css --output-style compressed",
+    "autoprefixer:prod": "postcss -u autoprefixer -r public/assets/css/*",
+    "autoprefixer": "npm run autoprefixer:prod",
+    "copy:fonts": "copyfiles -f source/fonts/* public/assets/fonts",
+    "copy:images": "copyfiles -f source/images/* public/assets/images",
+    "copy:files": "npm run copy:fonts && npm run copy:images",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:all": "npm run build:css && npm run html && npm run copy:files",
+    "watch:html": "onchange \"source/html/**/*.pug\" -- npm run html",
+    "watch:scss": "onchange \"source/sass/**/*.scss\" -- npm run build:css",
+    "watch": "npm run build:all && npm-run-all --parallel watch:scss watch:html",
+    "postinstall": "npm run build:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scheibome/me.scheibo.de.git"
+  },
+  "author": "Thomas Scheibitz <hello@scheibitz.com> (https://www.scheibitz.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scheibome/me.scheibo.de/issues"
+  },
+  "homepage": "https://github.com/scheibome/me.scheibo.de#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "bootstrap": "^5.0.0-beta1",
+    "copyfiles": "^2.3.0",
+    "mkdirp": "^1.0.4",
+    "node-sass": "^5.0.0",
+    "normalize.css": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "pug": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^3.0.2"
+  }
+}

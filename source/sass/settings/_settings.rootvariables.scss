@@ -1,0 +1,12 @@
+@mixin rootDefaults {
+  #{--root-color}: $default-color-root;
+	#{--root-color-bg}: $default-color-bg;
+	#{--root-color-link}: $default-color-link;
+	#{--root-color-text}: $default-color-text;
+	#{--root-avatarsize}: $default-avatarsize;
+	#{--root-bg}: $default-backgroundimage;
+}
+
+:root {
+  @include rootDefaults;
+}
