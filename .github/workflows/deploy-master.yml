@@ -2,7 +2,7 @@ name: Deploy to Master
 
 on:
   push:
-    branches: [ me.scheibo ]
+    branches: [ master ]
 
 jobs:
   build-and-deploy:
@@ -21,4 +21,3 @@ jobs:
         with:
           branch: master # The branch the action should deploy to.
           folder: public # The folder the action should deploy.
-          repository-name: scheibome/me.scheibo.de
