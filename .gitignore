@@ -1,0 +1,51 @@
+###
+## diese Dateien/Ordner nicht mit GIT versionieren
+###
+
+# dynamische Build-Files ausschließen
+/node_modules/
+config.sh
+
+# IDE spezielle Dateien
+msi.iws
+.idea/
+nbproject/
+.sass-cache/
+
+# OS spezielle Dateien
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+
+
+# Globalen excludes
+ChangeLog
+README.txt
+GPL.txt
+INSTALL.txt
+LICENSE.txt
+NEWS.txt
+RELEASE_NOTES.txt
+_.htaccess
+
+/ChangeLog
+/README.txt
+/GPL.txt
+/INSTALL.txt
+/LICENSE.txt
+/NEWS.txt
+/RELEASE_NOTES.txt
+/readme.md
+/license.md
+
+/vendor
+
+/public/
+!/public/.htaccess
+!/public/robots.txt
