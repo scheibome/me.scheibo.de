@@ -9,7 +9,7 @@
 	text-decoration: none;
 	font-weight: normal;
 	color: var(--root-color-link);
-	
+
 	&:before {
 		position: absolute;
 		top: 0;
@@ -21,30 +21,31 @@
 		-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 		clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 		transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
-		
+
 		@at-root #{$this}--style1#{&} {
-		   background-color: red; 
+		   background-color: red;
 		}
 	}
-	
+
+	&:focus,
 	&:hover {
-		
+
 		&:before {
 			-webkit-clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%);
 			clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%);
 		}
-		
+
 		#{$this}__content {
 			transform: translate3d(-10px,0,0);
 		}
 	}
-	
+
 	&__content {
 		position: relative;
 		z-index: 1;
 		transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
 	}
-	
+
 	&__title {
 		font-size: 1.2rem;
 	}
