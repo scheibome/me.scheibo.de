@@ -1,11 +1,10 @@
-@import "../../node_modules/normalize.css/normalize";
-@import
-'settings/settings.variables',
-'settings/settings.rootvariables',
-'settings/settings.fonts',
-'components/component.pageheader',
-'components/component.linkbox',
-'components/component.socialmedia';
+@use '../../node_modules/normalize.css/normalize';
+@use 'settings/variables';
+@use 'settings/fonts';
+@use 'components/pageheader';
+@use 'components/linkbox';
+@use 'components/socialmedia';
+
 
 body {
   // display: flex;
