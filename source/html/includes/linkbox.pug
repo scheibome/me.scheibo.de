@@ -1,4 +1,5 @@
 mixin linkbox(title, link, style, message)
-    a.c-linkbox(href=link)
+    a.c-linkbox(href=link, target='_blank', rel='noopener')
         .c-linkbox__content(title=message)
             h2.c-linkbox__title #{title}
+            span.c-linkbox__arrow(aria-hidden='true') →

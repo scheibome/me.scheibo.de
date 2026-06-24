@@ -1,16 +1,26 @@
 .c-pageheader {
 	padding-top: 3rem;
-	
+	text-align: center;
+
 	&__avatar {
 		border-radius: 50%;
 		display: block;
 		overflow: hidden;
-		margin: 1rem auto;
+		margin: 0 auto 1.25rem;
 		width: var(--root-avatarsize);
 		height: var(--root-avatarsize);
+		border: 2px solid var(--root-color-border);
+		outline: 3px solid var(--root-color);
+		outline-offset: 3px;
 	}
-	
+
 	&__username {
 		text-align: center;
+		font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+		font-size: 1.5rem;
+		font-weight: 500;
+		letter-spacing: -0.02em;
+		margin: 0 0 0.25rem;
+		color: var(--root-color-text);
 	}
 }

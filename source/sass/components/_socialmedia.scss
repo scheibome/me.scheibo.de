@@ -1,18 +1,30 @@
 .c-socialmedia {
 	max-width: 280px;
-	margin: 2rem auto;
+	margin: 2rem auto 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 0.25rem;
 
 	&__link {
-		display: block;
-		color: var(--root-color-text);
-		margin: 0 0.5rem;
-		transition: color 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		color: var(--root-color-muted);
+		border: 1px solid transparent;
+		transition: color 0.2s ease, border-color 0.2s ease;
 
 		&:focus,
 		&:hover {
 			color: var(--root-color);
+			border-color: oklch(34% .005 60);
+		}
+
+		svg {
+			width: 1.1rem;
+			height: 1.1rem;
 		}
 	}
 }

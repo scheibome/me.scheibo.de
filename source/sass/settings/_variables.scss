@@ -1,8 +1,10 @@
 :root {
-	--root-color: #217CBA;
-	--root-color-bg: #FFFFFF;
-	--root-color-link: #FFFFFF;
-	--root-color-text: #000000;
+	--root-color: oklch(72% .17 38);
+	--root-color-bg: oklch(18% .005 60);
+	--root-color-surface: oklch(22% .005 60);
+	--root-color-muted: oklch(74% .01 60);
+	--root-color-border: oklch(34% .005 60);
+	--root-color-link: oklch(96% .005 80);
+	--root-color-text: oklch(96% .005 80);
 	--root-avatarsize: 120px;
-	--root-bg: url('../images/FFFFFF-0.png');
 }
